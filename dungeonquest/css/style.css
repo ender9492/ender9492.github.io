@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+
+/* GLOBAL STYLES */
+
+tw-sidebar {
+  display: none;
+}
+
+body,
+tw-story {
+  font-family: "VT323", monospace;
+  text-align: center;
+  overflow: hidden;
+}
+
+body {
+  background-color: #000000;
+}
+
+tw-story {
+}
+
+/* SECTION STYLES */
+
+tw-story[tags~="titlescreen"] {
+  background-image: url("../images/titlescreen.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: appear 3s;
+}
+
+tw-story[tags~="transition"] {
+  background-image: none;
+  animation: appear 3s;
+}
+
+tw-story[tags~="death"] {
+  background-image: none;
+  animation: appear 3s;
+}
+
+tw-story[tags~="jailcell"] {
+  background-image: url("../images/jailcell.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="jailcell2"] {
+  background-image: url("");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallway"] {
+  background-image: url("");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* TEXT STYLES */
+
+tw-passage {
+  color: #ffffff;
+}
+
+tw-link {
+  display: block;
+  position: relative;
+  width: 300px;
+  padding: 5px;
+  margin: 20px auto;
+  color: #000000;
+  background-color: #939598;
+  border-top: 5px solid #6d6e71;
+  border-bottom: 5px solid #6d6e71;
+  transition: 0.2s;
+}
+
+tw-link:before,
+tw-link:after {
+  content: "";
+  top: 0;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  background: #6d6e71;
+  transition: 0.2s;
+}
+
+tw-link:before {
+  left: -5px;
+}
+
+tw-link:after {
+  right: -5px;
+}
+
+tw-link:hover {
+  color: #ffffff;
+  background-color: #ffde17;
+  border-color: #ffffff;
+}
+
+tw-link:hover:before,
+tw-link:hover:after {
+  background-color: #ffffff;
+}
