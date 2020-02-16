@@ -29,14 +29,14 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;audio\01-title.ogg&#39;;
+			'audio/01_title.ogg';
 			audio.load();
 			audio.loop = true;
 			audio.play();
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio(&#39;audio\bling.ogg&#39;).play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="2" name="transition-jail" tags="transition" position="603,294.5" size="100,100">You wake up
 			from a deep sleep to find yourself in a jail cell.
@@ -52,14 +52,14 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/No%20More%20Magic.ogg&#39;;
+			'audio/02-dungeon.ogg';
 			audio.load();
 			audio.loop = true;
 			audio.play();
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="3" name="jail-cell" tags="jailcell" position="801,300.5" size="100,100">You look around the
 			cell but see no way to escape.&lt;br&gt;The door is locked, and you can hear the guard snoring.
@@ -74,7 +74,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="4" name="jail-1" tags="jailcell2" position="602,423.5" size="100,100">You lay back down and
 			close your eyes...
@@ -101,7 +101,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="5" name="jail-2" tags="jailcell2" position="800,451.5" size="100,100">You attempt to hollar
 			for help...
@@ -129,7 +129,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="6" name="jail-3" tags="jailcell2" position="1002,402.1000061035156" size="100,100">You use
 			a small piece of metal and attempt to pick the cell door lock...
@@ -159,7 +159,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="7" name="death" tags="death" position="364,712.5" size="100,100">&lt;div
 			id=&#39;btn&#39;&gt;(if: (history:) contains &quot;potion&quot;)[&lt;h1&gt;GAME OVER&lt;/h1&gt;&lt;br&gt;You
@@ -188,7 +188,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="8" name="hallway" tags="hallway" position="1151,527.1000061035156" size="100,100">{(if:
 			(history:) contains &quot;hallway-1b&quot;)[You look around the hallway and see a sleeping guard and a
@@ -211,7 +211,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="9" name="transition-hallway" tags="transition" position="1149,399.5" size="100,100">You
 			slip out the door and sneak past the sleeping guard into the hallway...
@@ -219,7 +219,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="10" name="hallway-1" tags="hallway" position="818,674.8999938964844" size="100,100">You try
 			to pick the lock on the chest...
@@ -248,7 +248,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="11" name="hallway-2" tags="hallway" position="951,672.0999755859375" size="100,100">You
 			slowly sneak up behind the sleeping guard...
@@ -277,7 +277,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="12" name="hallway-3" tags="hallway" position="1199,672.1000061035156" size="100,100">You
 			silently scramble over to the window and grasp the window sill...
@@ -306,7 +306,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="13" name="transition-intersection" tags="transition" position="999,977.0999755859375"
 			size="100,100">You travel further down the hall and eventually come to an intersection...
@@ -322,7 +322,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="15" name="jail-2b" tags="jailcell2" position="696,597.5" size="100,100">You yell for help
 			at the top of your lungs!&lt;br&gt;...The guard awakes, startled, and sternly tells you to shut up.
@@ -331,7 +331,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="16" name="hallway-1b" tags="hallway" position="847,798.8999938964844" size="100,100">But
 			it&#39;s filled to the brim with poisonous snakes!
@@ -341,7 +341,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="17" name="hallway-2c" tags="hallway" position="1030,800.0999755859375" size="100,100">The
 			guard&#39;s neck makes an audible &quot;crack!&quot;
@@ -351,7 +351,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="18" name="intersection" tags="intersection" position="1150.8000030517578,976.5"
 			size="100,100">The hallway splits in two. You can go either left or right.
@@ -362,7 +362,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="19" name="hallway-3b" tags="" position="1203,801.5" size="100,100">As you pass through the
 			window, you realize that you&#39;re hundreds of feet above the ground!
@@ -371,7 +371,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="20" name="room" tags="room" position="1075.8000030517578,1126.2999877929688"
 			size="100,100">(if: (history:) contains &quot;potion&quot;)[You look around the room and see a
@@ -388,7 +388,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="21" name="hallwayB" tags="hallway" position="1225.8000030517578,1125.5" size="100,100">You
 			venture further down the hallway.
@@ -401,7 +401,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="22" name="potion" tags="room" position="982.8000030517578,1275.5" size="100,100">The chest
 			is unlocked.
@@ -412,7 +412,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="23" name="locked" tags="room" position="1100.8000030517578,1276.5" size="100,100">You try
 			the window, but it&#39;s latched shut and won&#39;t budge.
@@ -421,7 +421,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="24" name="fight" tags="hallway" position="1250.8000030517578,1274.5" size="100,100">You
 			lunge at the guard, grappling him.
@@ -465,7 +465,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="25" name="sneak" tags="" position="1398.8000030517578,1276.5" size="100,100">You crouch
 			down and attempt to sleep stealthily past the guard...
@@ -495,7 +495,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="26" name="jail-3b" tags="" position="997,258.5" size="100,100">You use a small piece of
 			metal and attempt to pick the cell door lock...
@@ -519,7 +519,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="27" name="hall-transition" tags="transition" position="1300.8000030517578,1451.5"
 			size="100,100">You venture further down the hallway, leaving the guard behind.
@@ -543,7 +543,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="28" name="fight-c" tags="" position="1023.8000030517578,1427.0999755859375" size="100,100">
 			You swing at the guard again, but he dodges it.
@@ -555,7 +555,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="29" name="sneak-b" tags="" position="1452.8000030517578,1400.5" size="100,100">It&#39;s the
 			guard!
@@ -566,7 +566,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="30" name="fight-b" tags="" position="1147.8000030517578,1401.5" size="100,100">You grab a
 			loose stone and swing at the guard...
@@ -595,7 +595,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="31" name="hallwayC" tags="transition" position="1351.7999877929688,998.9000244140625"
 			size="100,100">You&#39;re not quite sure how, but you suddenly jolt awake in the middle of a hallway
@@ -620,7 +620,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="32" name="hall" tags="hall" position="1300.8000030517578,1602.2999267578125"
 			size="100,100">You stand at the entrance of a large hall.
@@ -635,7 +635,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="33" name="statue" tags="hall" position="1151.8000030517578,1695.5" size="100,100">You gaze
 			at the statue.
@@ -645,7 +645,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="34" name="halldoor" tags="hall" position="1375.8000030517578,1751.5" size="100,100">You
 			begin to cross the large hall.
@@ -674,7 +674,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="35" name="statue-b" tags="hall" position="1000.8000030517578,1595.10009765625"
 			size="100,100">You hear a &quot;clink&quot; in the distance...
@@ -683,7 +683,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="36" name="door" tags="hall" position="1352.8000030517578,1901.5" size="100,100">&lt;div
 			id=&#39;btn&#39;&gt;(if: (history:) contains &quot;statue&quot;)[You try the door handle.&lt;br&gt;It
@@ -693,7 +693,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="37" name="exterior-transition" tags="transition" position="1201.8000030517578,1899.5"
 			size="100,100">The doorway opens up to the exterior of the dungeon.
@@ -716,7 +716,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="38" name="halldoor-b" tags="" position="1498.8000030517578,1752.5" size="100,100">You begin
 			to cross back to the other side of the hall.
@@ -747,7 +747,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="39" name="hall-B" tags="transition" position="1499,1599.10009765625" size="100,100">You
 			suddenly come to.
@@ -772,7 +772,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="40" name="exterior" tags="" position="1049.8000030517578,1899.5" size="100,100">You sprint
 			outside of the dungeon as fast as you can.
@@ -782,7 +782,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="41" name="wizard" tags="wizard" position="899.8000030517578,1898.5" size="100,100">...But
 			the sky suddenly darkens.
@@ -831,7 +831,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="42" name="battle" tags="wizard" position="899.8000030517578,2048.5" size="100,100">
 			&quot;YOU SHALL NOT PASS!&quot; the wizard shrieks.
@@ -859,7 +859,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="43" name="battle1" tags="wizard" position="746.8000030517578,2200.5" size="100,100">You
 			stand your ground!
@@ -879,7 +879,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="44" name="battle2" tags="wizard" position="898.8000030517578,2201.5" size="100,100">You
 			swiftly jump out of the way of the magical energy!
@@ -890,7 +890,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="45" name="battle3" tags="wizard" position="1051.8000030517578,2200.5" size="100,100">You
 			turn around an start running toward the door to the dungeon.
@@ -900,7 +900,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="46" name="revive" tags="" position="750,1901.5" size="100,100">Despite all odds, your body
 			somehow reconstitutes itself.
@@ -911,7 +911,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="47" name="endgame" tags="" position="947.8000030517578,2653.5" size="100,100">The mist
 			clears and the storm dissipates...
@@ -956,7 +956,7 @@
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="48" name="battle4" tags="wizard" position="999.8000030517578,2350.5" size="100,100">
 			&quot;EEEEEEE! HA HA HA!&quot; the wizard cackles.
@@ -969,7 +969,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="49" name="battle5" tags="wizard" position="1101.8000030517578,2496.5" size="100,100">The
 			wizard casts another energy spell at you.
@@ -982,7 +982,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="50" name="wizfight" tags="wizard" position="950.8000030517578,2500.5" size="100,100">You
 			stand firmly, facing the shrieking wizard.
@@ -1014,7 +1014,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="51" name="wizfight2" tags="" position="799.8000030517578,2500.5" size="100,100">Suddenly,
 			the energy bursts forth from your hand like lightning,
@@ -1045,7 +1045,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="52" name="fail" tags="" position="648.8000030517578,2498.5" size="100,100">The wizard
 			absorbs your energy blast and swings his glowing staff in the air.
@@ -1058,7 +1058,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="53" name="halldoor2" tags="" position="1259.8000030517578,1752.2999267578125"
 			size="100,100">You begin to cross the large hall.
@@ -1082,7 +1082,7 @@
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 		<tw-passagedata pid="54" name="hallway-2b" tags="hallway" position="1077,674.8999938964844" size="100,100">You
 			slowly sneak up behind the sleeping guard...
@@ -1105,7 +1105,7 @@
 			&lt;/div&gt;
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
-			Audio('audio\bling.ogg').play() );
+			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
 	</tw-storydata>
 
