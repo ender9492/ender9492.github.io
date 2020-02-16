@@ -2,9 +2,9 @@
 
 /* GLOBAL STYLES */
 
-tw-sidebar {
+/* tw-sidebar {
   display: none;
-}
+} */
 
 body,
 tw-story {
@@ -35,11 +35,6 @@ tw-story[tags~="transition"] {
   animation: appear 3s;
 }
 
-tw-story[tags~="death"] {
-  background-image: none;
-  animation: appear 3s;
-}
-
 tw-story[tags~="jailcell"] {
   background-image: url("../images/jailcell.png");
   background-size: contain;
@@ -47,15 +42,127 @@ tw-story[tags~="jailcell"] {
   background-repeat: no-repeat;
 }
 
-tw-story[tags~="jailcell2"] {
-  background-image: url("");
+tw-story[tags~="sleep"] {
+  background-image: url("../images/jailbed.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 tw-story[tags~="hallway"] {
-  background-image: url("");
+  background-image: url("../images/hallway.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallwindow"] {
+  background-image: url("../images/jailwindow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallchest"] {
+  background-image: url("../images/jailchest.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallsnakes"] {
+  background-image: url("../images/jailsnakes.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="intersection"] {
+  background-image: url("../images/intersection.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallwayb"] {
+  background-image: url("../images/hallwayB.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="room"] {
+  background-image: url("../images/room.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="roomwindow"] {
+  background-image: url("../images/roomwindow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="roomchest"] {
+  background-image: url("../images/roompotion.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="fight"] {
+  background-image: url("../images/fightguard.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hallopen"] {
+  background-image: url("../images/hallopen.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="hall"] {
+  background-image: url("../images/largehall.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="statue"] {
+  background-image: url("../images/hallstatue.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="halldoor"] {
+  background-image: url("../images/halldoor.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="exterior"] {
+  background-image: url("../images/outside.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="storm"] {
+  background-image: url("../images/outsidestorm.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+tw-story[tags~="wizard"] {
+  background-image: url("../images/wizardstorm.gif");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +174,7 @@ tw-passage {
   color: #ffffff;
 }
 
-tw-link {
+tw-link, {
   display: block;
   position: relative;
   width: 300px;
@@ -77,7 +184,7 @@ tw-link {
   background-color: #939598;
   border-top: 5px solid #6d6e71;
   border-bottom: 5px solid #6d6e71;
-  transition: 0.2s;
+  transition: 0.2s ease-in-out;
 }
 
 tw-link:before,
@@ -99,7 +206,7 @@ tw-link:after {
   right: -5px;
 }
 
-tw-link:hover {
+tw-link:hover, {
   color: #ffffff;
   background-color: #ffde17;
   border-color: #ffffff;

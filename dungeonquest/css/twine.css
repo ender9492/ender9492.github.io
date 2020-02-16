@@ -945,7 +945,7 @@ tw-icon,
     cursor: pointer
 }
 
-tw-link,
+/* tw-link,
 .enchantment-link {
     color: #4169E1;
     font-weight: bold;
@@ -968,10 +968,55 @@ tw-link:hover,
 tw-link:active,
 .enchantment-link:active {
     color: #DD4B39
-}
+} */
+
+
+tw-link, .enchantment-link {
+    display: block;
+    position: relative;
+    width: 300px;
+    padding: 5px;
+    margin: 20px auto;
+    color: #000000;
+    background-color: #939598;
+    border-top: 5px solid #6d6e71;
+    border-bottom: 5px solid #6d6e71;
+    transition: 0.2s ease-in-out;
+  }
+  
+  tw-link:before,
+  tw-link:after {
+    content: "";
+    top: 0;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background: #6d6e71;
+    transition: 0.2s;
+  }
+  
+  tw-link:before {
+    left: -5px;
+  }
+  
+  tw-link:after {
+    right: -5px;
+  }
+  
+  tw-link:hover, .enchantment-link:hover {
+    color: #ffffff;
+    background-color: #ffde17;
+    border-color: #ffffff;
+  }
+  
+  tw-link:hover:before,
+  tw-link:hover:after {
+    background-color: #ffffff;
+  }
+
 
 .visited {
-    color: #6941e1
+    color: #000000;
 }
 
 tw-passage tw-enchantment[style^="color"] .visited:not(:hover),

@@ -18,18 +18,20 @@
 
 
 		<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+
 		<tw-passagedata pid="1" name="title-screen" tags="titlescreen" position="400,298.5" size="100,100">
 			&lt;h1&gt;Dungeon Quest&lt;/h1&gt;
 			[[&lt;div id=&#39;btn&#39;&gt;Start&lt;/div&gt;|transition-jail]]
 
 			{&lt;script&gt;
+
 			var audio= document.createElement(&#39;audio&#39;);
 			if (audio.paused == false) {
 			audio.pause();
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			'audio/01_title.ogg';
+			'audio/01-title.ogg';
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -38,6 +40,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="2" name="transition-jail" tags="transition" position="603,294.5" size="100,100">You wake up
 			from a deep sleep to find yourself in a jail cell.
 			You&#39;re not sure how long you&#39;ve been asleep, or how you got there...
@@ -61,6 +65,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="3" name="jail-cell" tags="jailcell" position="801,300.5" size="100,100">You look around the
 			cell but see no way to escape.&lt;br&gt;The door is locked, and you can hear the guard snoring.
 			&lt;div id=&#39;btn&#39;&gt;
@@ -75,8 +81,12 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="4" name="jail-1" tags="jailcell2" position="602,423.5" size="100,100">You lay back down and
+			&lt;/script&gt;
+		
+			&lt;audio src="audio/wake.wav" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="4" name="jail-1" tags="sleep" position="602,423.5" size="100,100">You lay back down and
 			close your eyes...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -84,11 +94,11 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;[[Continue|jail-1b]]]]
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;[[Continue|jail-1b]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;It&#39;s
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;It&#39;s
 			no good!&lt;br&gt;You are too anxious to settle down or relax.[[Continue|jail-cell]]]]
 			]
 			]}
@@ -103,7 +113,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="5" name="jail-2" tags="jailcell2" position="800,451.5" size="100,100">You attempt to hollar
+
+
+		<tw-passagedata pid="5" name="jail-2" tags="jailcell" position="800,451.5" size="100,100">You attempt to hollar
 			for help...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -111,11 +123,11 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;[[Continue|jail-2b]]]]
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;[[Continue|jail-2b]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;Your
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;Your
 			throat is dry, and your voice is soft and hoarse.&lt;br&gt;No one hears you...[[Continue|jail-cell]]]]
 			]
 			]}
@@ -131,7 +143,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="6" name="jail-3" tags="jailcell2" position="1002,402.1000061035156" size="100,100">You use
+
+
+		<tw-passagedata pid="6" name="jail-3" tags="jailcell" position="1002,402.1000061035156" size="100,100">You use
 			a small piece of metal and attempt to pick the cell door lock...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -139,12 +153,12 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			lock clicks, and the door creaks open.[[Continue|transition-hallway]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;But
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;But
 			the guard hears you fiddling with the lock and shoves you back from it!&lt;br&gt;He falls back
 			asleep.[[Continue|jail-cell]]]]
 			]
@@ -161,7 +175,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="7" name="death" tags="death" position="364,712.5" size="100,100">&lt;div
+
+
+		<tw-passagedata pid="7" name="death" tags="transition" position="364,712.5" size="100,100">&lt;div
 			id=&#39;btn&#39;&gt;(if: (history:) contains &quot;potion&quot;)[&lt;h1&gt;GAME OVER&lt;/h1&gt;&lt;br&gt;You
 			have died.&lt;br&gt;But that strange potion you found starts glowing...&lt;br&gt;&lt;br&gt;[[Use revival
 			potion.|hallwayC]]]\
@@ -181,15 +197,19 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://github.com/anars/blank-audio/blob/master/1-second-of-silence.mp3&#39;;
+			&#39;audio/04-gameover.ogg&#39;;
 			audio.load();
-			audio.loop = true;
+			audio.loop = false;
 			audio.play();
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
+			&lt;/script&gt;
+		
+			&lt;audio src="audio/fail.wav" autoplay&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="8" name="hallway" tags="hallway" position="1151,527.1000061035156" size="100,100">{(if:
 			(history:) contains &quot;hallway-1b&quot;)[You look around the hallway and see a sleeping guard and a
 			window.]\
@@ -213,15 +233,22 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="9" name="transition-hallway" tags="transition" position="1149,399.5" size="100,100">You
-			slip out the door and sneak past the sleeping guard into the hallway...
+			slip out the door and sneak into the hallway...
 			[[&lt;div id=&#39;btn&#39;&gt;Continue&lt;/div&gt;|hallway]]
 
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="10" name="hallway-1" tags="hallway" position="818,674.8999938964844" size="100,100">You try
+			&lt;/script&gt;
+		
+			&lt;audio src="audio/travel.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="10" name="hallway-1" tags="hallchest" position="818,674.8999938964844" size="100,100">You
+			try
 			to pick the lock on the chest...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -229,12 +256,12 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			chest pops open!&lt;br&gt;[[Continue|hallway-1b]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			guard hears you fiddling with the lock and wakes up!&lt;br&gt;He grabs you and takes you back to the jail
 			cell...[[Continue|jail-cell]]]]
 			]
@@ -250,6 +277,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="11" name="hallway-2" tags="hallway" position="951,672.0999755859375" size="100,100">You
 			slowly sneak up behind the sleeping guard...
 			&lt;div id=&#39;btn&#39;&gt;
@@ -258,12 +287,12 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			swiftly judo chop the guard in the neck![[Continue|hallway-2c]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			guard jolts awake and grabs you before you can do anything!&lt;br&gt;He drags you back to the jail
 			cell...[[Continue|jail-cell]]]]
 			]
@@ -279,7 +308,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="12" name="hallway-3" tags="hallway" position="1199,672.1000061035156" size="100,100">You
+
+
+		<tw-passagedata pid="12" name="hallway-3" tags="hallwindow" position="1199,672.1000061035156" size="100,100">You
 			silently scramble over to the window and grasp the window sill...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -287,12 +318,12 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			unlatch the window and leap forth...[[Continue|hallway-3b]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			trip and smack your shin on the sill instead!&lt;br&gt;You hobble back a little, your shin throbbing in
 			pain.[[Continue|hallway]]]]
 			]
@@ -308,10 +339,21 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="13" name="transition-intersection" tags="transition" position="999,977.0999755859375"
 			size="100,100">You travel further down the hall and eventually come to an intersection...
-			(live: 6s)[(goto: &quot;intersection&quot;)]</tw-passagedata>
-		<tw-passagedata pid="14" name="jail-1b" tags="" position="549,552.5" size="100,100">You lay down and become
+						
+			&lt;div id=&#39;btn&#39;&gt;[[Continue.|intersection]]&lt;/div&gt;
+
+			{&lt;script&gt;
+			$(&#39;#btn&#39;).click( () =&gt; new
+			Audio('audio/bling.ogg').play() );
+			&lt;/script&gt;
+			&lt;audio src="audio/travel.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="14" name="jail-1b" tags="sleep" position="549,552.5" size="100,100">You lay down and become
 			strangely drowsy.
 
 			You fall into a deep, deep sleep...
@@ -323,8 +365,11 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="15" name="jail-2b" tags="jailcell2" position="696,597.5" size="100,100">You yell for help
+			&lt;/script&gt;
+			&lt;audio src="audio/drop.wav" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="15" name="jail-2b" tags="jailcell" position="696,597.5" size="100,100">You yell for help
 			at the top of your lungs!&lt;br&gt;...The guard awakes, startled, and sternly tells you to shut up.
 
 			[[&lt;div id=&#39;btn&#39;&gt;Continue&lt;/div&gt;|jail-cell]]
@@ -332,8 +377,11 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="16" name="hallway-1b" tags="hallway" position="847,798.8999938964844" size="100,100">But
+			&lt;/script&gt;
+			&lt;audio src="audio/yell.wav" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="16" name="hallway-1b" tags="hallsnakes" position="847,798.8999938964844" size="100,100">But
 			it&#39;s filled to the brim with poisonous snakes!
 			They strike out and bite you, and the pain is excrutiating.
 			The light starts to dim as you feel the venom in your blood...
@@ -342,7 +390,10 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
+			&lt;/script&gt;
+			&lt;audio src="audio/snakes.wav" autoplay&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="17" name="hallway-2c" tags="hallway" position="1030,800.0999755859375" size="100,100">The
 			guard&#39;s neck makes an audible &quot;crack!&quot;
 			He crumples into a pile on the floor, dead.
@@ -352,7 +403,10 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
+			&lt;/script&gt;
+			&lt;audio src="audio/drop.wav" autoplay&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="18" name="intersection" tags="intersection" position="1150.8000030517578,976.5"
 			size="100,100">The hallway splits in two. You can go either left or right.
 
@@ -364,7 +418,10 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="19" name="hallway-3b" tags="" position="1203,801.5" size="100,100">As you pass through the
+
+
+		<tw-passagedata pid="19" name="hallway-3b" tags="hallwindow" position="1203,801.5" size="100,100">As you pass
+			through the
 			window, you realize that you&#39;re hundreds of feet above the ground!
 			You fall to your doom and hit the ground with a splat.
 			[[&lt;div id=&#39;btn&#39;&gt;Continue&lt;/div&gt;|death]]
@@ -372,7 +429,10 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
+			&lt;/script&gt;
+			&lt;audio src="audio/drop.wav" autoplay&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="20" name="room" tags="room" position="1075.8000030517578,1126.2999877929688"
 			size="100,100">(if: (history:) contains &quot;potion&quot;)[You look around the room and see a
 			window.&lt;br&gt;&lt;br&gt;What would you like to do?]\
@@ -390,7 +450,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="21" name="hallwayB" tags="hallway" position="1225.8000030517578,1125.5" size="100,100">You
+
+
+		<tw-passagedata pid="21" name="hallwayB" tags="hallwayb" position="1225.8000030517578,1125.5" size="100,100">You
 			venture further down the hallway.
 			You discover a guard standing in the middle of the hallway facing away from you.
 			&lt;div id=&#39;btn&#39;&gt;
@@ -402,8 +464,13 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="22" name="potion" tags="room" position="982.8000030517578,1275.5" size="100,100">The chest
+			&lt;/script&gt;
+				
+			&lt;audio src="audio/travel.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="22" name="potion" tags="roomchest" position="982.8000030517578,1275.5" size="100,100">The
+			chest
 			is unlocked.
 			You pop it open and discover a small bottle with a glowing liquid in it.
 			You place it in your pocket.
@@ -413,8 +480,13 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="23" name="locked" tags="room" position="1100.8000030517578,1276.5" size="100,100">You try
+			&lt;/script&gt;
+				
+			&lt;audio src="audio/potion.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="23" name="locked" tags="roomwindow" position="1100.8000030517578,1276.5" size="100,100">You
+			try
 			the window, but it&#39;s latched shut and won&#39;t budge.
 
 			[[&lt;div id=&#39;btn&#39;&gt;Go back.&lt;/div&gt;|room]]
@@ -423,7 +495,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="24" name="fight" tags="hallway" position="1250.8000030517578,1274.5" size="100,100">You
+
+
+		<tw-passagedata pid="24" name="fight" tags="fight" position="1250.8000030517578,1274.5" size="100,100">You
 			lunge at the guard, grappling him.
 			You quickly put the guard in a sleeper hold...
 			&lt;div id=&#39;btn&#39;&gt;
@@ -432,13 +506,13 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;He
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;He
 			struggles as your choke-hold tightens.&lt;br&gt;After a few seconds his body goes
 			limp...[[Continue|hall-transition]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			guard reaches back and flings you over his should.&lt;br&gt;You slam to the ground, but quickly hop to your
 			feet.[[Continue|fight-b]]]]
 			]
@@ -458,7 +532,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/03-battle.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -467,7 +541,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="25" name="sneak" tags="" position="1398.8000030517578,1276.5" size="100,100">You crouch
+
+
+		<tw-passagedata pid="25" name="sneak" tags="hallwayb" position="1398.8000030517578,1276.5" size="100,100">You crouch
 			down and attempt to sleep stealthily past the guard...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -475,14 +551,14 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;For
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;For
 			some reason, the guard is distracted by something outside the window.&lt;br&gt;You get past him without him
 			noticing you.[[Continue|hall-transition]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
-			make it past the sleeping guard,&lt;br&gt;but suddenly you feel something grab the back of your
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You stealthily
+			make it past the guard,&lt;br&gt;but suddenly you feel something grab the back of your
 			collar.[[Continue|sneak-b]]]]
 			]
 			]}
@@ -497,7 +573,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="26" name="jail-3b" tags="" position="997,258.5" size="100,100">You use a small piece of
+
+
+		<tw-passagedata pid="26" name="jail-3b" tags="jailcell" position="997,258.5" size="100,100">You use a small piece of
 			metal and attempt to pick the cell door lock...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -505,7 +583,7 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			lock clicks, and the door creaks open.[[Continue|transition-hallway]]]]
 			]
 			]}
@@ -521,7 +599,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="27" name="hall-transition" tags="transition" position="1300.8000030517578,1451.5"
+
+
+		<tw-passagedata pid="27" name="hall-transition" tags="hallopen" position="1300.8000030517578,1451.5"
 			size="100,100">You venture further down the hallway, leaving the guard behind.
 
 			The hallway opens up into a larger hall...
@@ -536,7 +616,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/06-cavern.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -544,8 +624,11 @@
 
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="28" name="fight-c" tags="" position="1023.8000030517578,1427.0999755859375" size="100,100">
+			&lt;/script&gt;
+			&lt;audio src="audio/travel.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="28" name="fight-c" tags="fight" position="1023.8000030517578,1427.0999755859375" size="100,100">
 			You swing at the guard again, but he dodges it.
 
 			Off balance, you stumble as he lunges forward,
@@ -557,7 +640,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="29" name="sneak-b" tags="" position="1452.8000030517578,1400.5" size="100,100">It&#39;s the
+
+
+		<tw-passagedata pid="29" name="sneak-b" tags="fight" position="1452.8000030517578,1400.5" size="100,100">It&#39;s the
 			guard!
 
 			You writhe your way out of his grasp and square up to him.
@@ -568,7 +653,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="30" name="fight-b" tags="" position="1147.8000030517578,1401.5" size="100,100">You grab a
+
+
+		<tw-passagedata pid="30" name="fight-b" tags="fight" position="1147.8000030517578,1401.5" size="100,100">You grab a
 			loose stone and swing at the guard...
 			&lt;div id=&#39;btn&#39;&gt;
 			{(link: &quot;Roll Dice&quot;)[
@@ -576,13 +663,13 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			move too quickly for the guard.&lt;br&gt;The stone strikes his temple and he
 			collapses...[[Continue|hall-transition]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			stone barely misses the guard.[[Continue|fight-c]]]]
 			]
 			]}
@@ -597,6 +684,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="31" name="hallwayC" tags="transition" position="1351.7999877929688,998.9000244140625"
 			size="100,100">You&#39;re not quite sure how, but you suddenly jolt awake in the middle of a hallway
 			intersection.
@@ -613,7 +702,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/02-dungeon.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -621,7 +710,10 @@
 
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
+			&lt;/script&gt;
+			&lt;audio src="audio/wake.wav" autoplay&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="32" name="hall" tags="hall" position="1300.8000030517578,1602.2999267578125"
 			size="100,100">You stand at the entrance of a large hall.
 			(if: (history:) contains &quot;statue&quot;)[You can see a door in the distance on the other side.]\
@@ -637,7 +729,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="33" name="statue" tags="hall" position="1151.8000030517578,1695.5" size="100,100">You gaze
+
+
+		<tw-passagedata pid="33" name="statue" tags="statue" position="1151.8000030517578,1695.5" size="100,100">You gaze
 			at the statue.
 			It has a strange aura about it...
 
@@ -647,6 +741,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="34" name="halldoor" tags="hall" position="1375.8000030517578,1751.5" size="100,100">You
 			begin to cross the large hall.
 			As you do, a stone gives way underfoot...
@@ -656,12 +752,12 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			quickly dart across the floor, dodging all booby traps.[[Continue|door]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			try evading the trap, but the a trap-door gives way beneath you...[[Continue|death]]]]
 			]
 			]}
@@ -676,7 +772,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="35" name="statue-b" tags="hall" position="1000.8000030517578,1595.10009765625"
+
+
+		<tw-passagedata pid="35" name="statue-b" tags="statue" position="1000.8000030517578,1595.10009765625"
 			size="100,100">You hear a &quot;clink&quot; in the distance...
 
 			[[&lt;div id=&#39;btn&#39;&gt;Continue&lt;/div&gt;|hall]]
@@ -684,8 +782,11 @@
 			{&lt;script&gt;
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
-			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="36" name="door" tags="hall" position="1352.8000030517578,1901.5" size="100,100">&lt;div
+			&lt;/script&gt;
+			&lt;audio src="audio/statue.ogg" autoplay&gt;}</tw-passagedata>
+
+
+		<tw-passagedata pid="36" name="door" tags="halldoor" position="1352.8000030517578,1901.5" size="100,100">&lt;div
 			id=&#39;btn&#39;&gt;(if: (history:) contains &quot;statue&quot;)[You try the door handle.&lt;br&gt;It
 			unlatches and the door slowly opens...[[Go through the door.|exterior-transition]]]\
 			(else:)[You try the door handle, but it&#39;s locked. You don&#39;t see a keyhole or any way to unlock
@@ -695,7 +796,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="37" name="exterior-transition" tags="transition" position="1201.8000030517578,1899.5"
+
+
+		<tw-passagedata pid="37" name="exterior-transition" tags="exterior" position="1201.8000030517578,1899.5"
 			size="100,100">The doorway opens up to the exterior of the dungeon.
 			The sunlight is blinding, but you are almost free...
 
@@ -709,7 +812,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/07-exterior.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -718,7 +821,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="38" name="halldoor-b" tags="" position="1498.8000030517578,1752.5" size="100,100">You begin
+
+
+		<tw-passagedata pid="38" name="halldoor-b" tags="halldoor" position="1498.8000030517578,1752.5" size="100,100">You begin
 			to cross back to the other side of the hall.
 			The booby traps activate again...
 			&lt;div id=&#39;btn&#39;&gt;
@@ -727,13 +832,13 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;Once
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;Once
 			again, you expertly dodge all the traps,&lt;br&gt;and you make it back to the other side
 			unscathed.[[Continue|hall]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			try evading the traps, but a previously unseen spike shoots from the wall.&lt;br&gt;It impales
 			you...[[Continue|death]]]]
 			]
@@ -749,6 +854,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="39" name="hall-B" tags="transition" position="1499,1599.10009765625" size="100,100">You
 			suddenly come to.
 			You&#39;re standing in a large hall...
@@ -765,7 +872,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/cavern.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -774,7 +881,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="40" name="exterior" tags="" position="1049.8000030517578,1899.5" size="100,100">You sprint
+
+
+		<tw-passagedata pid="40" name="exterior" tags="exterior" position="1049.8000030517578,1899.5" size="100,100">You sprint
 			outside of the dungeon as fast as you can.
 			The fresh air and sun feels envigorating!
 
@@ -784,7 +893,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="41" name="wizard" tags="wizard" position="899.8000030517578,1898.5" size="100,100">...But
+
+
+		<tw-passagedata pid="41" name="wizard" tags="storm" position="899.8000030517578,1898.5" size="100,100">...But
 			the sky suddenly darkens.
 
 			|clue)[A storm brews, thunder sounds, and lightning strikes.]
@@ -824,7 +935,7 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/08-wizardbattle.ogg&#39;;
 			audio.load();
 			audio.loop = true;
 			audio.play();
@@ -833,6 +944,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="42" name="battle" tags="wizard" position="899.8000030517578,2048.5" size="100,100">
 			&quot;YOU SHALL NOT PASS!&quot; the wizard shrieks.
 
@@ -844,23 +957,11 @@
 			[[Dodge the spell!|battle2]]
 			[[Run away!|battle3]]
 			&lt;/div&gt;
-			{&lt;script&gt;
-			audio.pause();
-			var audio= document.createElement(&#39;audio&#39;);
-			if (audio.paused == false) {
-			audio.pause();
-			audio.currentTime = 0;
-			}else{
-			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
-			audio.load();
-			audio.loop = true;
-			audio.play();
-			}
-
-			$(&#39;#btn&#39;).click( () =&gt; new
+			{$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="43" name="battle1" tags="wizard" position="746.8000030517578,2200.5" size="100,100">You
 			stand your ground!
 
@@ -881,6 +982,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="44" name="battle2" tags="wizard" position="898.8000030517578,2201.5" size="100,100">You
 			swiftly jump out of the way of the magical energy!
 
@@ -892,6 +995,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="45" name="battle3" tags="wizard" position="1051.8000030517578,2200.5" size="100,100">You
 			turn around an start running toward the door to the dungeon.
 			&lt;div id=&#39;btn&#39;&gt;
@@ -902,7 +1007,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="46" name="revive" tags="" position="750,1901.5" size="100,100">Despite all odds, your body
+
+
+		<tw-passagedata pid="46" name="revive" tags="exterior" position="750,1901.5" size="100,100">Despite all odds, your body
 			somehow reconstitutes itself.
 
 			You materialize outside the dungeon walls.
@@ -913,7 +1020,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="47" name="endgame" tags="" position="947.8000030517578,2653.5" size="100,100">The mist
+
+
+		<tw-passagedata pid="47" name="endgame" tags="exterior" position="947.8000030517578,2653.5" size="100,100">The mist
 			clears and the storm dissipates...
 
 			|clue)[&lt;h1&gt;Congratulations!&lt;/h1&gt;]
@@ -949,15 +1058,17 @@
 			audio.currentTime = 0;
 			}else{
 			audio.src=
-			&#39;https://opengameart.org/sites/default/files/%D0%BC%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0.mp3&#39;;
+			&#39;audio/09-victory.ogg&#39;;
 			audio.load();
-			audio.loop = true;
+			audio.loop = false;
 			audio.play();
 			}
 
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="48" name="battle4" tags="wizard" position="999.8000030517578,2350.5" size="100,100">
 			&quot;EEEEEEE! HA HA HA!&quot; the wizard cackles.
 
@@ -971,6 +1082,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="49" name="battle5" tags="wizard" position="1101.8000030517578,2496.5" size="100,100">The
 			wizard casts another energy spell at you.
 
@@ -984,6 +1097,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="50" name="wizfight" tags="wizard" position="950.8000030517578,2500.5" size="100,100">You
 			stand firmly, facing the shrieking wizard.
 
@@ -1016,7 +1131,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="51" name="wizfight2" tags="" position="799.8000030517578,2500.5" size="100,100">Suddenly,
+
+
+		<tw-passagedata pid="51" name="wizfight2" tags="wizard" position="799.8000030517578,2500.5" size="100,100">Suddenly,
 			the energy bursts forth from your hand like lightning,
 			heading straight for the wizard!
 			&lt;div id=&#39;btn&#39;&gt;
@@ -1025,13 +1142,13 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			energy strikes the wizard square in the chest.&lt;br&gt;He bursts into a million
 			pieces![[Continue|endgame]]]]
 			](else:)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
+			src=&quot;images/d20failure2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;The
 			wizard casts a protection barrier.&lt;br&gt;Your energy blast dissipates, leaving the wizard
 			unscathed.[[Continue|fail]]]]
 			]
@@ -1047,7 +1164,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="52" name="fail" tags="" position="648.8000030517578,2498.5" size="100,100">The wizard
+
+
+		<tw-passagedata pid="52" name="fail" tags="wizard" position="648.8000030517578,2498.5" size="100,100">The wizard
 			absorbs your energy blast and swings his glowing staff in the air.
 
 			He cackles and casts another, larger magical energy ball,
@@ -1060,7 +1179,9 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
-		<tw-passagedata pid="53" name="halldoor2" tags="" position="1259.8000030517578,1752.2999267578125"
+
+
+		<tw-passagedata pid="53" name="halldoor2" tags="hall" position="1259.8000030517578,1752.2999267578125"
 			size="100,100">You begin to cross the large hall.
 			As you do, a stone gives way underfoot...
 			&lt;div id=&#39;btn&#39;&gt;
@@ -1069,7 +1190,7 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			quickly dart across the floor, dodging all booby traps.[[Continue|door]]]]
 			]
 			]}
@@ -1084,6 +1205,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 		<tw-passagedata pid="54" name="hallway-2b" tags="hallway" position="1077,674.8999938964844" size="100,100">You
 			slowly sneak up behind the sleeping guard...
 			&lt;div id=&#39;btn&#39;&gt;
@@ -1092,7 +1215,7 @@
 			(if: $roll is &quot;SUCCESS!&quot;)[
 			(replace: ?result)
 			[[&lt;img
-			src=&quot;http://www.animated-gifs.eu/category_leisure/leisure-games-dice-various/0024.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
+			src=&quot;images/d20success2.gif&quot;&gt;&lt;/img&gt;]|clue)[&lt;br&gt;$roll&lt;br&gt;You
 			swiftly judo chop the guard in the neck![[Continue|hallway-2c]]]]
 			]
 			]}
@@ -1107,6 +1230,8 @@
 			$(&#39;#btn&#39;).click( () =&gt; new
 			Audio('audio/bling.ogg').play() );
 			&lt;/script&gt;}</tw-passagedata>
+
+
 	</tw-storydata>
 
 	<script title="Twine engine code" data-main="harlowe">
@@ -2661,7 +2786,7 @@
 														(f[p.uniqueID] = {}), u = l[e] || [], d = u[0] ===
 														H && u[1], b = d && u[2], p = d && y.childNodes[
 															d]; p = ++d && p && p[g] || (b = d = 0) || h
-													.pop();)
+														.pop();)
 														if (1 === p.nodeType && ++b && p === t) {
 															l[e] = [H, d, b];
 															break
