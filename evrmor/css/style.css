@@ -134,8 +134,9 @@ table {
 
 header {
   height: 50px;
+  width: calc(100% - 40px);
   margin: 0px 20px;
-  position: relative;
+  position: fixed;
   top: 0;
   z-index: 10;
   overflow: hidden;
@@ -274,18 +275,20 @@ video {
   background-size: cover;
   transition: 1s opacity;
   filter: grayscale(100%);
+  opacity: .6;
 }
 
 .welcome {
   width: 100%;
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-30%);
+  z-index: -5;
 }
 
 .welcome p {
-  text-shadow: 0 0 2px #ffffff;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
   font-size: 1.3em;
   margin: 30px;
   color: #171123;
@@ -303,7 +306,7 @@ video {
 
 section {
   display: none;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 section:target {
@@ -312,23 +315,29 @@ section:target {
 
 #home {
   width: 100%;
-  background-color: ;
+  background-color: #ffffff;
 }
 
 #product {
   width: 100%;
-  background-color: ;
+  background-color: #ffffff;
 }
 
 #about {
   width: 100%;
-  background-color: ;
+  background-color: #ffffff;
 }
 
 #liability {
   width: 100%;
-  padding: 10% 20%;
-  background-color: ;
+  height: 100vh;
+  padding: 8% 20% 0%;
+  color: #171123;
+  background-color: #ffffff;
+  background-image: url(../media/medgray.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 article {
