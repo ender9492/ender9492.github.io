@@ -278,9 +278,29 @@ section:target {
 
 .pane {
   width: 100%;
-  height: 75vh;
 }
 
+.parallax-wrapper {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.background {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+}
 
 /* SPLASH SECTION */
 
@@ -335,23 +355,31 @@ video {
 }
 
 #home .pane:nth-child(1) {
+  height: 90vh;
   background: url(../media/home1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 #home .pane:nth-child(2) {
-  background-color: orange;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(216, 219, 210, 1) 100%);
 }
 
 #home .pane:nth-child(3) {
-  background-color: yellow;
+  height: 90vh;
+  background: url(../media/home2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #home .pane:nth-child(4) {
-  background-color: green;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(216, 219, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 
@@ -363,19 +391,31 @@ video {
 }
 
 #product .pane:nth-child(1) {
-  background-color: black;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(216, 219, 210, 1) 100%);
 }
 
 #product .pane:nth-child(2) {
-  background-color: gray;
+  height: 90vh;
+  background: url(../media/home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #product .pane:nth-child(3) {
-  background-color: darkgray;
+  height: 90vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(216, 219, 210, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 #product .pane:nth-child(4) {
-  background-color: lightgray;
+  height: 90vh;
+  background: url(../media/home2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
