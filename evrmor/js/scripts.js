@@ -1,4 +1,5 @@
-// JUMP CODE
+// JUMP CODE //
+
 // The function actually applying the offset
 function offsetAnchor() {
 	if (location.hash.length !== 0) {
@@ -17,3 +18,19 @@ function offsetAnchor() {
   
   // Set the offset when entering page with hash present in the url
   window.setTimeout(offsetAnchor, 0);
+
+
+  // PARALLAX SCROLL //
+
+  const parllax = document.querySelector(".parallax");
+
+window.addEventListener("scroll", function() {
+	let offset = window.pageYOffset;
+	parllax.style.backgroundPositionY = offset * 0.5 + 'px';
+});
+
+
+  // AOS //
+  <script>
+  AOS.init();
+</script>
